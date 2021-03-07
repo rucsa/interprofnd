@@ -1,40 +1,47 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-const Nav = props => {
+class Nav extends Component {
+  state = {
+    isTop: false,
+  };
+
+  componentDidMount() {
+    document.addEventListener('scroll', () => {
+      const isTop = window.scrollY > 600;
+      if (isTop !== this.state.isTop) {
+        this.setState({ isTop })
+      }
+    })
+  };
+
+  render () {
     return (
 
-<nav className="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+<nav className="navbar navbar-color-on-scroll navbar-transparent fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
     <div className="container">
-      <div className="navbar-translate">
-        <a className="navbar-brand" href="#"></a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="sr-only">Toggle navigation</span>
-          <span className="navbar-toggler-icon"></span>
-          <span className="navbar-toggler-icon"></span>
-          <span className="navbar-toggler-icon"></span>
-        </button>
-      </div>
       <div className="collapse navbar-collapse">
-        <ul className="navbar-nav ml-auto">
+        <ul className={this.state.isTop ? "navbar-nav ml-auto nav-dark" : "navbar-nav ml-auto" } >
           <li className="dropdown nav-item">
-            <a href="#" className="nav-link" data-toggle="dropdown">
+            <AnchorLink offset={() => 100} href='#about' className="nav-link">
               <i className="material-icons">fingerprint</i> Despre noi
-            </a>
+            </AnchorLink>
           </li>
           <li className="dropdown nav-item">
-            <a href="#" className="nav-link" data-toggle="dropdown">
+            <AnchorLink offset={() => 100} href='#service' className="nav-link">
               <i className="material-icons">build</i> Servicii
-            </a>
+            </AnchorLink>
           </li>
           <li className="button-container nav-item iframe-extern">
-            <a href="#" target="_blank" className="btn  btn-rose   btn-round btn-block">
-              <i className="material-icons">call</i> Contacteaza-ne
-            </a>
+            <AnchorLink offset={() => 20} href='#form' className="btn  btn-rose   btn-round btn-block">
+              <i className="material-icons">call</i> Contactează-ne
+            </AnchorLink>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  );
+  )};
 }
+
 export default Nav;

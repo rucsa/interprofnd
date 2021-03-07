@@ -1,16 +1,27 @@
 {
-  "name": "react-interprof",
+  "homepage": "/",
+  "name": "interprof-nd",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "build:dist": "react-build-dist",
     "react": "^16.13.1",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-build-dist": "0.0.8",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "1.1.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build:dist": "react-build-dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }

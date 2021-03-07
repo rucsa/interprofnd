@@ -1,150 +1,107 @@
 import React from 'react'; 
+import About from './About'
+import Form from './Form'
 
 const Container = props => {
 
 	return (
-<div className="main main-raised">
-    <div className="container">
-      <div className="section text-center">
-        <div className="row">
-          <div className="col-md-12 ml-auto mr-auto">
-            <h2 className="title">Despre Noi</h2>
-            <h5 className="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
-          </div>
-        </div>
-        <div className="features">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="info">
-                <div className="icon icon-info">
-                  <i className="material-icons">chat</i>
-                </div>
-                <h4 className="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-              </div>
+	<div className="main main-raised">
+	    <div className="container">
+	      <div className="section">
+	      <About />
+	        <div className="features text-center" id='service'>
+	        	<h2 className="title">Cum te putem ajuta</h2>
+						<h4>Reparăm monitoare, unități de calcul, servere, cântare electronice (făra intervenție in sistemul de măsură și calibrare) și oferim împământări profesionale. Completăm serviciile prin oferirea de soluții de prevenție prin implementarea</h4>
+						<h4>ECHIPAMENTULUI INTELIGENT DE SUPRAVEGHERE ȘI INTERVENȚIE CONTROLATĂ. </h4>
+				<div className="row">
+					<div className="col-md-6 ml-auto mr-auto">
+						<div className="card-body">
+							<div className="styled-div_1">
+							</div>
+						</div>
+					</div>
+					<div className="col-md-6 ml-auto mr-auto">
+						<div className="card-body">
+							<a href="#pablo">
+								<h3 className="card-title">{'Service'}</h3>
+							</a>
+							<p className="card-description">
+						  Ne place să ne diferențiem prin oferirea de servicii de încredere și tratăm fiecare asistență cu seriozitate.
+							Ne mândrim cu experința noastră și 
+							ne place să vă facem recomandări cu privire la soluționarea cauzelor 
+							astfel încat defecțiunile să nu se mai repete. Suntem de părere că întodeuna când apar probleme în funcționarea echipamentelor eletronice 
+							trebuie înlăturată cauza, nu numai piesele defecte. 
+							</p>
             </div>
-            <div className="col-md-4">
-              <div className="info">
-                <div className="icon icon-success">
-                  <i className="material-icons">verified_user</i>
-                </div>
-                <h4 className="info-title">Verified Users</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="info">
-                <div className="icon icon-danger">
-                  <i className="material-icons">fingerprint</i>
-                </div>
-                <h4 className="info-title">Fingerprint</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="section text-center">
-        <h2 className="title">Here is our team</h2>
-        <div className="team">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="team-player">
-                <div className="card card-plain">
-                  <div className="col-md-6 ml-auto mr-auto">
-                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" className="img-raised rounded-circle img-fluid"/>
-                  </div>
-                  <h4 className="card-title">Gigi Hadid <br/>
-                    <small className="card-description text-muted">Model</small>
-                  </h4>
-                  <div className="card-body">
-                    <p className="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div className="card-footer justify-content-center">
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-twitter"></i></a>
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-instagram"></i></a>
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-facebook-square"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="team-player">
-                <div className="card card-plain">
-                  <div className="col-md-6 ml-auto mr-auto">
-                    <img src="../assets/img/faces/christian.jpg" alt="Thumbnail Image" className="img-raised rounded-circle img-fluid"/>
-                  </div>
-                  <h4 className="card-title">Christian Louboutin<br/>
-                    <small className="card-description text-muted">Designer</small>
-                  </h4>
-                  <div className="card-body">
-                    <p className="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div className="card-footer justify-content-center">
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-twitter"></i></a>
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="team-player">
-                <div className="card card-plain">
-                  <div className="col-md-6 ml-auto mr-auto">
-                    <img src="../assets/img/faces/kendall.jpg" alt="Thumbnail Image" className="img-raised rounded-circle img-fluid"/>
-                  </div>
-                  <h4 className="card-title">Kendall Jenner<br/>
-                    <small className="card-description text-muted">Model</small>
-                  </h4>
-                  <div className="card-body">
-                    <p className="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div className="card-footer justify-content-center">
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-twitter"></i></a>
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-instagram"></i></a>
-                    <a href="#pablo" className="btn btn-link btn-just-icon"><i className="fa fa-facebook-square"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="section section-contacts">
-        <div className="row">
-          <div className="col-md-8 ml-auto mr-auto">
-            <h2 className="text-center title">Work with us</h2>
-            <h4 className="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
-            <form className="contact-form">
-              <div className="row">
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <label className="bmd-label-floating">Your Name</label>
-                    <input type="email" className="form-control"/>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="form-group">
-                    <label className="bmd-label-floating">Your Email</label>
-                    <input type="email" className="form-control"/>
-                  </div>
-                </div>
-              </div>
-              <div className="form-group">
-                <label for="exampleMessage" className="bmd-label-floating">Your Message</label>
-                <textarea type="email" className="form-control" rows="4" id="exampleMessage"></textarea>
-              </div>
-              <div className="row">
-                <div className="col-md-4 ml-auto mr-auto text-center">
-                  <button className="btn btn-primary btn-raised">Send Message</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-md-6 ml-auto mr-auto">
+						<div className="card-body">
+							<a href="#pablo">
+								<h3 className="card-title">{'Prevenție'}</h3>
+							</a>
+							<p className="card-description">							
+							Durata de bună funcționare a unor echipamente electronice poate fi mărita considerabil 
+							dacă s-ar ține seama de calitatea sursei de energie electrică utilizată în alimentarea lor. 
+							În marea majoritate a locațiilor din țară puterea instalată este depașită în anumite 
+							perioade de timp de puterea consumată, drept consecință apar în rețea fluctuații de tensiune, 
+							șocuri de curenți și întreruperi de scurtă sau lungă durată. 
+							Astfel echipamentele electronice sunt afectate din punct de vedere funcțional.
+							</p>
+						</div>
+					</div>
+					<div className="col-md-6 ml-auto mr-auto">
+						<div className="card-body">
+							<div className="styled-div_2">
+							</div>
+            			</div>
+					</div>
+				</div>
+				<div className="text-center">
+					<h4>Oferim spre vânzare echipamente de prevenție pentru calculatoare, servere, monitoare și cântare electronice.
+					</h4>
+				</div>
+	        </div>
+			<div className="features text-center">
+				<h2 className="title">Cum lucrăm</h2>
+				<div className="row process-card cum-lucram">
+					<div className="col-md-3 ml-auto mr-auto">
+						<i className="material-icons blue-icon">chat</i>
+						<h3 className="card-title">Ne contactezi</h3>
+						<p className="description">
+							Primul pas este să ne contactezi la numărul de telefon de mai jos!  
+							Așa discutăm problema și 
+							decidem împreună tipul de evaluare potrivită, plata și prețul serviciilor.
+						</p>
+					</div>
+					<div className="col-md-3 ml-auto mr-auto">
+						<i className="material-icons blue-icon">assignment</i>
+						<h3 className="card-title">Evaluăm</h3>
+						<p className="description">
+						Evaluarea se face  în unele cazuri la telefon sau la fața locului. Îți vom pune câteva întrebări simple pentru a descoperi problema.
+						</p>
+					</div>
+					<div className="col-md-3 ml-auto mr-auto">
+						<i className="material-icons blue-icon">build</i>
+						<h3 className="card-title">Intervenim</h3>
+						<p className="description">
+						În timpul stabilit de comun acord venim la fața locului pentru reparații sau instalarea echipamentului de prevenție.
+						</p>
+					</div>
+					<div className="col-md-3 ml-auto mr-auto">
+						<i className="material-icons red-icon">done</i>
+						<h3 className="card-title">Garantăm lucrarea</h3>
+						<p className="description">
+						Iți oferim 12 luni garanție la echipamentele inteligente de protecție și intervenție controlată. În caz de apar probleme, ne găsești la un apel distanță. 
+						</p>
+					</div>
+				</div>
+			</div>
+	      </div>
+		  <Form />
+	    </div>
+	  </div>
   );
 }
 
